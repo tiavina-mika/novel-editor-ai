@@ -2,16 +2,17 @@
 /* @jsx jsx */
 /** @jsxImportSource @emotion/react */
 import { Typography, useTheme } from "@mui/material";
-import { LAYOUT_CONTENT_PADDING } from "../utils/constants";
-import Footer from "../components/Footer";
 import { Theme } from "@emotion/react";
-import { useState } from "react";
-import TextEditorField from "../components/form/fields/TextEditorField";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import Form from "../components/form/Form";
 import { css } from "@emotion/css";
+
+import TextEditorField from "../components/form/fields/TextEditorField";
+import Footer from "../components/Footer";
+import Header from "../components/Header";
+import { LAYOUT_CONTENT_PADDING } from "../utils/constants";
+import Form from "../components/form/Form";
 
 const mentions = [
   { label: "Lea Thompson", value: "xxxx1" },
@@ -87,9 +88,7 @@ const Home = () => {
   return (
     <div className="flexColumn spaceBetween" css={classes.root}>
       <div className="flexColumn stretchSelf flex1">
-        <div css={classes.header} className="stretchSelf">
-          <Typography variant="h3">Mik.</Typography>
-        </div>
+        <Header />
         <div css={classes.content}>
           <div css={{ marginTop: 4 }}>
             <Typography className="grey800" css={{ fontSize: 14 }}>
