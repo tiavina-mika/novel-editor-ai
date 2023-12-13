@@ -1,2 +1,2 @@
-# novel-editor-ai
+# product-hero-draft
 Created with CodeSandbox
