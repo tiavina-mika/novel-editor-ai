@@ -219,7 +219,7 @@ const TextEditor = ({
         disableLocalStorage
         extensions={[
           Markdown.configure({
-            html: false,
+            html: true,
             transformCopiedText: true,
             transformPastedText: true
           })
